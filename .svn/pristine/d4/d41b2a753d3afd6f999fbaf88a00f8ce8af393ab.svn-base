@@ -1,0 +1,64 @@
+﻿ETHEntity@ player;
+float playerSizeX;
+vector3 playerGlobalPosition;
+
+void drawPlayerFirstTime(){
+	AddEntity("player.ent", vector3(200.0f,537.0f * GetScale(),0.0f),player);
+	
+	playerSizeX = player.GetSize().x;
+	
+	//print("\n----------> "+ screenSize.y +"\n");
+}
+
+
+void movePlayer(){
+	ETHPhysicsController@ controller = player.GetPhysicsController();
+	
+	vector2 velocity = controller.GetLinearVelocity();
+	
+	playerGlobalPosition = player.GetPosition();
+	
+	float linearX = velocity.x, linearY = velocity.y;
+	
+	ETHInput@ input = GetInputHandle();
+		
+	if(input.GetLeftClickState() == 1){
+		PlaySample("soundfx/sfx_wing.ogg");
+		player.SetFrame(1);
+		controller.SetLinearVelocity(vector2(linearX,-15.0f));
+		
+		controller.SetAngularVelocity(-2.0f);
+		
+		if(player.GetAngle() < 330.0f && player.GetAngle() > 330.0f){
+			player.SetAngle(330.0f);
+		}
+	}else{
+		player.SetFrame(0);	
+
+		controller.SetAngularVelocity(2.0f);
+
+		if(player.GetAngle() > 30.0f){
+			player.SetAngle(30.0f);
+		}
+	}	
+	
+	if(player.GetPosition().y <= -25.0f){
+		player.SetPosition(vector3(player.GetPosition().x,-25.0f,player.GetPosition().z));
+	}
+
+}
+
+
+void ETHBeginContactCallback_player(
+	ETHEntity@ thisEntity,
+	ETHEntity@ other,
+	vector2 contactPointA,
+	vector2 contactPointB,
+	vector2 contactNormal){
+	
+	if(!gameOver){
+		PlaySample("soundfx/sfx_hit.ogg");
+		gameOver = true;
+	}
+	
+}

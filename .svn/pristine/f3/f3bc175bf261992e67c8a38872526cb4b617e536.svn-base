@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<Ethanon>
+    <Entity shape="1" sensor="0" bullet="0" fixedRotation="0" friction="1" density="1" restitution="0" gravityScale="0" applyLight="0" castShadow="0" type="5" layerDepth="0.5" static="1" blendMode="0">
+        <PivotAdjust x="-960" y="-96.5" />
+        <Sprite>chaoDown.png</Sprite>
+        <Particles />
+        <Collision>
+            <Position x="960" y="96.5" z="0" />
+            <Size x="1920" y="193" z="1" />
+        </Collision>
+        <CustomData />
+    </Entity>
+</Ethanon>

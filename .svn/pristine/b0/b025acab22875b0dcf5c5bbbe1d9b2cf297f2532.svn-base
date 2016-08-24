@@ -1,0 +1,27 @@
+default
+{
+	title = Tab Birds;
+	width = 768;
+	height = 1024;
+	definedWords = DISPLAY_FPS_RATE;
+}
+
+windows
+{
+	definedWords = ENABLE_DEBUGGING_CHEATS;
+}
+
+macosx
+{
+	definedWords =  ENABLE_DEBUGGING_CHEATS;
+}
+
+ios
+{
+	definedWords =  ONLINE_LEADERBOARD_SUPPORTED,GAME_CENTER,ENABLE_BANNER_ADS,ENABLE_VIDEO_ADS;
+}
+
+android
+{
+	definedWords =  ONLINE_LEADERBOARD_SUPPORTED,OPEN_FEINT,ENABLE_BANNER_ADS;
+}
