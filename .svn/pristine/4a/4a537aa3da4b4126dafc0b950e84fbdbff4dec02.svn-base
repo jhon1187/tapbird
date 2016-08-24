@@ -1,6 +1,0 @@
-echo off
-cls
-set /P id=Digite o nome do arquivo (sem o .apk no final): %=%
-zipalign -f 4 %id%.apk %id%_aligned.apk
-echo "Finalizado, se o alinhamento estiver correto o arquivo %id%_aligned.apk deve ter sido criado/atualizado"
-pause
