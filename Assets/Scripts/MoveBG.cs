@@ -6,7 +6,7 @@ public class MoveBG : MonoBehaviour
 
 		private Material currentMaterial;
 		private GameController gameController;
-		private float offset;
+		private Vector2 offset_x;
 		public float speed;
 
 
@@ -28,9 +28,15 @@ public class MoveBG : MonoBehaviour
 						return;
 				}
 
-			offset += 0.001f;
+			offset_x += new Vector2 (0.1f * speed, 0) * Time.deltaTime;
 
-			currentMaterial.SetTextureOffset("_MainTex", new Vector2 (offset * speed, 0));
+			currentMaterial.SetTextureOffset("_MainTex", offset_x);
+
+			if (transform.position.x <= -18) {
+				Vector3 temp = transform.position;
+				temp.x = 18 + (transform.position.x + 18);
+				transform.position = temp;
+			}
 
 		}
 }

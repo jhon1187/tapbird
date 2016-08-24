@@ -24,7 +24,7 @@ public class MoveChao : MonoBehaviour
 						return;
 				}
 
-				transform.position -= new Vector3 (0.001f * speed, 0, 0);
+		        transform.position -= new Vector3 (0.1f * speed, 0, 0) * Time.deltaTime;
 		
 				if (transform.position.x <= -18) {
 					Vector3 temp = transform.position;
