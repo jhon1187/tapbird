@@ -2,6 +2,7 @@ fileFormatVersion: 2
 guid: f482b27a69b08ea4794c4dda994708c6
 TextureImporter:
   fileIDToRecycleName:
+    8900000: generatedCubemap
     21300000: chaoFFDown
   serializedVersion: 2
   mipmaps:
@@ -18,10 +19,10 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
-  isReadable: 0
+  isReadable: 1
   grayScaleToAlpha: 0
   generateCubemap: 0
-  cubemapConvolution: 0
+  cubemapConvolution: 1
   cubemapConvolutionSteps: 7
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
