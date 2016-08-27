@@ -82,7 +82,7 @@ public class PlayerBehaviour : MonoBehaviour
 
 		void OnCollisionEnter2D (Collision2D coll)
 		{
-				if (coll.collider.tag == "Chao") {
+				if (coll.collider.tag == "Ground") {
 						mesh.eulerAngles = new Vector3 (0, 0, -60);
 						gameController.CallGameOver ();
 				}

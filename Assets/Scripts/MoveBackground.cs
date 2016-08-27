@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveBG : MonoBehaviour
+public class MoveBackground : MonoBehaviour
 {
 
 		private Material currentMaterial;
@@ -31,12 +31,6 @@ public class MoveBG : MonoBehaviour
 			offset_x += new Vector2 (0.1f * speed, 0) * Time.deltaTime;
 
 			currentMaterial.SetTextureOffset("_MainTex", offset_x);
-
-			if (transform.position.x <= -18) {
-				Vector3 temp = transform.position;
-				temp.x = 18 + (transform.position.x + 18);
-				transform.position = temp;
-			}
 
 		}
 }
