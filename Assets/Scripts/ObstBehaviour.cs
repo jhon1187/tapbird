@@ -31,7 +31,7 @@ public class ObstBehaviour : MonoBehaviour
 
 				transform.position += new Vector3 (speed, 0, 0) * Time.deltaTime;
 
-				if (transform.position.x < -4.5) {
+				if (transform.position.x < -10) {
 						gameObject.SetActive (false);		
 				}
 

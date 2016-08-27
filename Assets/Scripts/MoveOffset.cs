@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class MoveBackground : MonoBehaviour
+public class MoveOffset : MonoBehaviour
 {
 
 		private Material currentMaterial;
