@@ -131,8 +131,8 @@ public class GameController : MonoBehaviour
 
 				ObstBehaviour[] obsts = FindObjectsOfType (typeof(ObstBehaviour)) as ObstBehaviour[];
 
-				foreach (ObstBehaviour o in obsts) {
-						o.gameObject.SetActive (false);
+				for (int i = 0, size = obsts.Length; i < size; i++) {
+					obsts[i].gameObject.SetActive (false);
 				}
 
 				hideFade ();
